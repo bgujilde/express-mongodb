@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const path = require('path');
 const date = require(__dirname + "/date.js");
 const mongoose = require("mongoose");
 
@@ -12,6 +13,7 @@ const _ = require("lodash");
 const app = express();
 
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
