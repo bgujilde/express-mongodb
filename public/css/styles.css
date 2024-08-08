@@ -1,9 +1,14 @@
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
-  min-height: 1000px;
   font-family: 'helvetica neue';
 }
+
+section {
+  height: 100vh;
+}
+
+
 
 h1 {
   color: #fff;
@@ -91,6 +96,6 @@ input[type="text"]:focus {
 
 footer {
   color: white;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 1);
   text-align: center;
 }

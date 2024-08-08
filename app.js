@@ -18,6 +18,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('/favicon.ico', (req, res) => res.status(204));
+
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -144,7 +146,8 @@ app.post("/delete", function(req, res){
     
 });
 
+let PORT = 3000;
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || PORT, function(){
     console.log("Server is running on port " + PORT);
 });
